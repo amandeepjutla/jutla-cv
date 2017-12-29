@@ -1,6 +1,7 @@
 % Amandeep Jutla - CV structure/configuration/commands file
 % 12/27/17
 
+\usepackage{fourier} % utopia font
 \usepackage[letterpaper, margin=1in]{geometry} 
 \usepackage{fancyhdr} % Customize the header and footer
 \usepackage{lastpage} % Required for calculating the number of pages in the document
@@ -24,6 +25,9 @@
 \newlength{\smallertextwidth}
 \setlength{\smallertextwidth}{\textwidth}
 \addtolength{\smallertextwidth}{-2cm}
+
+% small caps for headings
+\sectionfont{\scshape}
 
 \renewcommand{\title}[1]{
 {\huge{\color{black}\textbf{#1}}}\\ % Header section name and color
