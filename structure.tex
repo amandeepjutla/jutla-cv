@@ -7,9 +7,9 @@
 \usepackage{lastpage} % Required for calculating the number of pages in the document
 \usepackage{hyperref} % Colors for links, text and headings
 \usepackage{color} % Required for custom colors
-\usepackage{sectsty} % Allows customization of titles
+%\usepackage{sectsty} % Allows customization of titles
+\usepackage{titlesec}
 
-\sectionfont{\color{black}} % Color section titles
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
 % set up header
@@ -27,7 +27,11 @@
 \addtolength{\smallertextwidth}{-2cm}
 
 % small caps for headings
-\sectionfont{\scshape}
+%\sectionfont{\color{black}} % Color section titles
+%\sectionfont{\scshape}
+
+\titleformat{\subsection}[runin]
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
 
 \renewcommand{\title}[1]{
 {\huge{\color{black}\textbf{#1}}}\\ % Header section name and color
