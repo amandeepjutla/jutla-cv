@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  16 MAR 2018 06:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  5 APR 2018 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,7 +340,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `jutla_cv.out' has not changed.
-(rerunfilecheck)             Checksum: BA9E73A134072645E100F0C84720B299;1717.
+(rerunfilecheck)             Checksum: E458A2D2DED148D41A8A69DDE2183015;1724.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
  ) 
 Here is how much of TeX's memory you used:
@@ -357,7 +357,7 @@ mbx12.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr7.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti10.pfb>
-Output written on jutla_cv.pdf (4 pages, 84071 bytes).
+Output written on jutla_cv.pdf (4 pages, 84037 bytes).
 PDF statistics:
  137 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams
