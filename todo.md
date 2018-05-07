@@ -1,0 +1,1 @@
+- generic pandoc-markdown template + script -> docx or pdf in cumc vs non-cumc format
