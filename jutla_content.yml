@@ -1,0 +1,60 @@
+---
+# header
+name: Amandeep Jutla
+firstname: Amandeep
+lastname: Jutla
+address:
+- 225 E Chicago Ave, Box 10
+- Chicago, IL 60611
+phone: (312) 227-3420
+email: ajutla@amandeepjutla.com
+urls: 
+- www.amandeepjutla.com #no http
+
+# personal data
+birthdate: October 6, 1988
+birthplace: Manhattan, Kansas
+citizenship: U.S.
+
+# sections
+education:
+- year: 2012
+  subject: Medicine
+  degree: M.D.
+  institute: University of Missouri, Kansas City School of Medicine
+  city: Kansas City, Missouri
+- year: 2008
+  subject: Liberal Arts
+  degree: B.A.
+  institute: University of Missouri, Kansas City
+  city: Kansas City, Missouri
+
+intro: "I know my fate. One day my name will be associated with the memory of something tremendous --- a crisis without equal on earth, the most profound collision of conscience, a decision that was conjured up against everything that had been believed, demanded, hallowed so far. I am no man, I am dynamite."
+
+skills:
+- Aesthetics, Ethics, Metaphysics, Nihilism
+- Psychology, Ontology, Poetry, Value theory
+- Voluntarism, Tragedy, Fact–value distinction
+- Anti-foundationalism, Philosophy of history
+
+experience:
+- years: 1879--1889
+  employer: Freiberufler
+  job: Freier Philisoph
+  city: Sils-Maria
+- years: 1869–-1879
+  employer: Universität Basel
+  job: Professor für klassische Philologie
+  city: Basel
+- years: 1867--1868
+  employer: Preußischen Artillerie
+  job: Kanonier
+  city: Naumburg
+
+
+# Settings
+mainfont: Hoefler Text
+fontsize: 10pt
+lang: en-US
+geometry: letterpaper, margin=1in
+---
