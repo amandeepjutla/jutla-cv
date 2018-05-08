@@ -1,154 +1,118 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
+\hypertarget{firstname-lastname}{%
+\section{\texorpdfstring{\(firstname\)
+\(lastname\)}{firstname lastname}}\label{firstname-lastname}}
 
-\documentclass[$fontsize$]{article}
+\(for(address)\) \(address\) \(endfor\) \(phone\) \(email\)
 
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-% LAYOUT
-%--------------------------------
-% Margins
-\usepackage{geometry} 
-\geometry{$geometry$}
+Date Prepared: \(date\)
 
-% Do not indent paragraphs
-\setlength\parindent{0in}
+\hypertarget{education}{%
+\subsection{Education}\label{education}}
 
-% Enable multicolumns
-\usepackage{multicol}
-\setlength{\columnsep}{-3.5cm}
+\(for(education)\) \(education.year\) \(education.degree\)
+\(education.institute\) \(endfor\) \#\# Post-Graduate Training
 
-% set up footer
-\fancypagestyle{cvpage}{\fancyhf{}\cfoot{$lastname$ \thepage\ of \pageref{LastPage}}}
+\(for(training)\) \(training.start\)--\(training.end\)
+\(training.institute\) \(training.program\) \(training.title\)
 
-% get rid of header and footer rules
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\(endfor\)
 
-% LANGUAGE
-%--------------------------------
-% Set the main language
-$if(lang)$
-  \usepackage{polyglossia}
-  \setmainlanguage{$lang$}
-$endif$
+\hypertarget{licensure-and-certification}{%
+\subsection{Licensure and
+Certification}\label{licensure-and-certification}}
 
-% TYPOGRAPHY
-%--------------------------------
-\usepackage{fontspec} 
-\usepackage{xunicode}
-\usepackage{xltxtra}
-% converts LaTeX specials (quotes, dashes etc.) to Unicode
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
-% Cool ampersand
-\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
+\hypertarget{state-licensure}{%
+\subsubsection{State Licensure}\label{state-licensure}}
 
-% MARGIN NOTES
-%--------------------------------
-\usepackage{marginnote}
-\newcommand{\note}[1]{\marginnote{\scriptsize #1}}
-\renewcommand*{\raggedleftmarginnote}{}
-\setlength{\marginparsep}{-5pt}
-\reversemarginpar
+\(for(license)\) \(license.start\)--\(license.end\) \(license.type\)
+\(endfor\)
 
-% HEADINGS
-%--------------------------------
-\usepackage{sectsty} 
-\usepackage[normalem]{ulem} 
-\sectionfont{\rmfamily\mdseries} 
-\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
-\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+\hypertarget{american-board-of-psychiatry-neurology-certification}{%
+\subsection{American Board of Psychiatry \& Neurology
+Certification}\label{american-board-of-psychiatry-neurology-certification}}
 
-% PDF SETUP
-%--------------------------------
-\usepackage{hyperref}
-\hypersetup
-{
-  pdfauthor={$name$},
-  pdfsubject={$name$'s CV},
-  pdftitle={$name$'s CV},
-  colorlinks, breaklinks, xetex, bookmarks,
-  filecolor=black,
-  urlcolor=[rgb]{0.117,0.682,0.858},
-  linkcolor=[rgb]{0.117,0.682,0.858},
-  linkcolor=[rgb]{0.117,0.682,0.858},
-  citecolor=[rgb]{0.117,0.682,0.858}
-}
+\(for(cert)\) \(cert.date\) \(cert.type\) \(endfor\)
 
-% DOCUMENT
-%--------------------------------
-\begin{document}
+\hypertarget{honors-and-awards}{%
+\subsection{Honors and Awards}\label{honors-and-awards}}
 
-% use footer style with name and page numbers
-\pagestyle{cvpage}
+\hypertarget{national}{%
+\subsubsection{National}\label{national}}
 
-{\LARGE $name$}\\[.2cm]
+\(for(national_award)\) \(national_award.date\) \(national_award.name\)
+\(national_award.organization\)
 
-$if(urls)$
-  \begin{multicols}{2}
-$endif$
+\(endfor\)
 
-$for(address)$
-  $address$\\
-$endfor$
+\hypertarget{university}{%
+\subsubsection{University}\label{university}}
 
-\vspace{-10pt}
+\(for(university_award)\) \(university_award.date\)
+\(university_award.name\) \(university_award.organization\)
+\(university_award.description\) \(endfor\)
 
-$phone$\\
-\href{mailto:$email$}{$email$}\\
+\hypertarget{professional-societies}{%
+\subsection{Professional Societies}\label{professional-societies}}
 
-$if(urls)$
-  \columnbreak
-  $for(urls)$
-    \href{http://$urls$}{$urls$}\\
-  $endfor$
-  \end{multicols}
-$endif$
+\hypertarget{national-memberships}{%
+\subsubsection{National Memberships}\label{national-memberships}}
 
-\vspace{30pt}
+\(for(national_membership)\)
+\(national_membership.start\)--\(national_membership.end\)
+\(national_membership.organization\) \(endfor\)
 
-$if(intro)$
-  $intro$
-$endif$
+\hypertarget{regional-memberships}{%
+\subsubsection{Regional Memberships}\label{regional-memberships}}
 
-$if(education)$
-  \section*{Education}
-  \noindent
-  \begin{tabbing}
-    \hspace{3cm} \= hspace{1cm} \= \kill
-    $for(education)$
-      {$education.year$} \> {$education.degree$} \> {$education.institute$}\\[5pt]
-    $endfor$
-  \end{tabbing}
-$endif$
+\(for(regional_membership)\)
+\(regional_membership.start\)--\(regional_membership.end\)
+\(regional_membership.organization\) \(endfor\)
 
-\subsection*{Areas of Interest}
-$if(skills)$
-  \begin{itemize}
-      $for(skills)$
-        \item $skills$
-      $endfor$
-  \end{itemize}
-$endif$
+\hypertarget{leadership}{%
+\subsubsection{Leadership}\label{leadership}}
 
-% \vfill
+\(for(leadership)\) \(leadership.start\)--\(leadership.end\)
+\(leadership.position\) \(leadership.position\)
+\(leadership.organization\) \(endfor\)
 
-\vspace{25pt}
+\hypertarget{teaching}{%
+\subsection{Teaching}\label{teaching}}
 
-\section*{Previous Experience}
-\noindent
-$for(experience)$
-  \note{$experience.years$}\textsc{$experience.employer$}\\
-  \emph{$experience.job$}\\
-  $experience.city$\\[.2cm]
-$endfor$
+\hypertarget{northwestern-university-feinberg-school-of-medicine}{%
+\subsubsection{Northwestern University Feinberg School of
+Medicine}\label{northwestern-university-feinberg-school-of-medicine}}
 
-$if(languages)$
-  \section*{Languages}
-  $for(languages)$
-    \emph{$languages.language$} ($languages.proficiency$)\\
-  $endfor$
-$endif$
+\(for(teaching_northwestern)\) \(teaching_northwestern.item\)
 
-\end{document}
+\(endfor\)
+
+\hypertarget{david-geffen-school-of-medicine-at-ucla}{%
+\subsubsection{David Geffen School of Medicine at
+UCLA}\label{david-geffen-school-of-medicine-at-ucla}}
+
+\(for(teaching_ucla)\) \(teaching_ucla.item\) \(endfor\)
+
+\hypertarget{presentations}{%
+\subsection{Presentations}\label{presentations}}
+
+\hypertarget{abstracts}{%
+\subsubsection{Abstracts}\label{abstracts}}
+
+(* denotes presenting author)
+
+\hypertarget{advocacy-and-public-service}{%
+\subsubsection{Advocacy and Public
+Service}\label{advocacy-and-public-service}}
+
+\hypertarget{grand-rounds-and-lectures}{%
+\subsubsection{Grand Rounds and
+Lectures}\label{grand-rounds-and-lectures}}
+
+\hypertarget{publications}{%
+\subsection{Publications}\label{publications}}
+
+\hypertarget{articles}{%
+\subsubsection{Articles}\label{articles}}
+
+\hypertarget{book-chapters}{%
+\subsubsection{Book Chapters}\label{book-chapters}}
