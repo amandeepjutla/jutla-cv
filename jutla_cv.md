@@ -135,13 +135,13 @@ Johnson MR, Hatzis NM, **Jutla A**. "Treatment of children and adolescents." In:
 ### Abstracts
 (* denotes presenting author)
 
-**Jutla A\***, Smith AM, Folmsbee SS. "Complexities in the neurodevelopmental presentation and psychiatric management of a child with multiple inherited chromosomal abnormalities." Presented at: American Psychiatric Association, 2018 Annual Meeting; May 6, 2018; New York, NY.
+**Jutla A\***, Smith AM, Folmsbee SS. "Complexities in the neurodevelopmental presentation and psychiatric management of a child with multiple inherited chromosomal abnormalities." Presented at: American Psychiatric Association, 2018 Annual Meeting; May 6, 2018; New York, NY. doi:10.13140/RG.2.2.19698.81608.
 
-Moreno AM\*, **Jutla A**, Weiss AG, MacKenzie JM. "Effectiveness of undergraduate and graduate medical education in preparing pediatricians to manage psychiatric problems." Presented at: American Academy of Child and Adolescent Psychiatry, 64th Annual Meeting; October 25, 2017; Washington, DC.
+Moreno AM\*, **Jutla A**, Weiss AG, MacKenzie JM. "Effectiveness of undergraduate and graduate medical education in preparing pediatricians to manage psychiatric problems." Presented at: American Academy of Child and Adolescent Psychiatry, 64th Annual Meeting; October 25, 2017; Washington, DC. doi:10.1016/j.jaac.2017.09.084.
 
-**Jutla A\***. "Prenatal antidepressant exposure as a risk factor for autism spectrum disorder: an examination of the evidence." Presented at: American Academy of Child and Adolescent Psychiatry, 63rd Annual Meeting; October 26, 2016; New York, NY.
+**Jutla A\***. "Prenatal antidepressant exposure as a risk factor for autism spectrum disorder: an examination of the evidence." Presented at: American Academy of Child and Adolescent Psychiatry, 63rd Annual Meeting; October 26, 2016; New York, NY. doi:10.1016/j.jaac.2016.09.016.
 
-**Jutla A\***, Ramos N. "An 'atypical' case of neuroleptic malignant syndrome." Presented at: American Academy of Child and Adolescent Psychiatry, 62nd Annual Meeting; October 23, 2015; San Antonio, TX.
+**Jutla A\***, Ramos N. "An 'atypical' case of neuroleptic malignant syndrome." Presented at: American Academy of Child and Adolescent Psychiatry, 62nd Annual Meeting; October 23, 2015; San Antonio, TX. doi:10.13140/RG.2.2.33120.58888.
 
 ### Advocacy and Public Service
 
