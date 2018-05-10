@@ -15,3 +15,8 @@ jutla_cv.pdf
 *.gz
 *.tmp
 *.xref
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.pdf
