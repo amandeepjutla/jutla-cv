@@ -5,10 +5,10 @@
 \usepackage[letterpaper, margin=1in]{geometry} 
 \usepackage{fancyhdr} % Customize the header and footer
 \usepackage{lastpage} % Required for calculating the number of pages in the document
-\usepackage{hyperref} % Colors for links, text and headings
 \usepackage{color} % Required for custom colors
 \usepackage{sectsty} % Allows customization of titles
-\usepackage{titlesec}
+\usepackage{titlesec} % must load before hyperref to avoid package conflict
+\usepackage{hyperref} % Colors for links, text and headings
 
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
