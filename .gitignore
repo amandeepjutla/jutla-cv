@@ -1,17 +1,12 @@
-
 jutla_cv.sublime-workspace
 *.4ct
 *.4tc
 *.css
-*.docx
 *.dvi
 *.html
 *.idv
 *.lg
 *.log
-jutla_cv.log
-jutla_cv.pdf
-*.rtf
 *.gz
 *.tmp
 *.xref
@@ -19,4 +14,3 @@ jutla_cv.pdf
 *.fdb_latexmk
 *.fls
 *.out
-*.pdf
