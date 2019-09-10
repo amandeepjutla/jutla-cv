@@ -8,7 +8,75 @@
 
 \documentclass[10pt]{article}
 
-\input{structure.tex}
+% Amandeep Jutla - CV structure/configuration/commands file
+% 12/27/17
+
+\usepackage{fourier} % utopia font
+\usepackage[letterpaper, margin=1in]{geometry} 
+\usepackage{fancyhdr} % Customize the header and footer
+\usepackage{lastpage} % Required for calculating the number of pages in the document
+\usepackage{color} % Required for custom colors
+\usepackage{sectsty} % Allows customization of titles
+\usepackage{titlesec} % must load before hyperref to avoid package conflict
+\usepackage{hyperref} % Colors for links, text and headings
+
+\setcounter{secnumdepth}{0} % Suppress section numbering
+
+% set up header
+\fancypagestyle{plain}{\fancyhf{}\cfoot{Jutla \thepage\ of \pageref{LastPage}}} % Define a custom page style
+\pagestyle{plain} % Use the custom page style through the document
+\renewcommand{\headrulewidth}{0pt} % Disable the default header rule
+\renewcommand{\footrulewidth}{0pt} % Disable the default footer rule
+
+\setlength\parindent{0pt} % Stop paragraph indentation
+\setlength\parskip{3pt}
+
+% Text width for tabbing environments
+\newlength{\smallertextwidth}
+\setlength{\smallertextwidth}{\textwidth}
+\addtolength{\smallertextwidth}{-2cm}
+
+% small caps for headings
+\sectionfont{\color{black}} % Color section titles
+\sectionfont{\scshape}
+
+\titleformat{\subsection}[runin]
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\renewcommand{\title}[1]{
+{\huge{\color{black}\textbf{#1}}}\\ % Header section name and color
+\rule{\textwidth}{0.5mm}\\ % Rule under the header
+}
+
+\newcommand{\training}[5]{
+\begin{tabbing}
+	\hspace{1cm} \= hspace{1cm} \= \kill
+	{#1}--{#2} \> \> {#3}\\
+	\> \> {#4}\\
+	\> \> {#5}
+\end{tabbing}
+}
+
+\newcommand{\award}[3]{
+\begin{tabbing}
+	\hspace{1cm} \= hspace{1cm} \= \kill
+	{#1} \> \> {#2}\\
+	\> \> {#3} 
+\end{tabbing}
+}
+
+\newcommand{\leadership}[5]{
+	\begin{tabbing}
+		\hspace{1cm} \= hspace{1cm} \= \kill
+		{#1}--{#2} \> \> {#3}\\
+		\> \> {#4}\\
+		\> \> {#5} 
+	\end{tabbing}
+}
+
+\newcommand{\publication}[1]{\begin{flushleft}{#1}\end{flushleft}}
+\newcommand{\teaching}[1]{\begin{flushleft}{#1}\end{flushleft}}
+\newcommand{\lecture}[1]{\begin{flushleft}{#1}\end{flushleft}}
 
 \begin{document}
 \title{Amandeep Jutla}
@@ -30,9 +98,9 @@
 \section{Education}
 
 \begin{tabbing}
-\hspace{3cm} \= hspace{1cm} \= \kill
-{2012} \> M.D. \> University of Missouri, Kansas City School of Medicine\\[5pt]
-{2008} \> B.A. \> University of Missouri, Kansas City
+\hspace{1cm} \= hspace{1cm} \= hspace{1cm} \= \kill
+{2012} \> \> M.D. \> University of Missouri, Kansas City School of Medicine\\[5pt]
+{2008} \> \> B.A. \> University of Missouri, Kansas City
 \end{tabbing}
 
 \section{Post-Graduate Training}
@@ -60,7 +128,7 @@
 \subsection{State Licensure}
 
 \begin{tabbing}
-	\hspace{3cm} \= hspace{1cm} \= \kill
+	\hspace{1cm} \= hspace{1cm} \= \kill
 	{2018--2020} \> \> New York\\[5pt]
 	{2016--2020} \> \> Illinois\\[5pt]
 	{2014--2019} \> \> California
@@ -69,7 +137,7 @@
 \subsection{American Board of Psychiatry and Neurology Certification}
 
 \begin{tabbing}
-	\hspace{3cm} \= hspace{1cm} \= \kill
+	\hspace{1cm} \= hspace{1cm} \= \kill
 	{2018--2028} \> \> Child and Adolescent Psychiatry\\[5pt]
 	{2016--2026} \> \> General Psychiatry
 \end{tabbing}
@@ -99,14 +167,14 @@
 \award{2019}{Honorable Mention, Bender-Fishbein Award for Child Psychiatry Research}{Columbia University}
 
 \award{2014}{Alex Rogawski Memorial Prize}
-{UCLA Psychiatric Clinical Faculty Association}
+{University of California, Los Angeles Psychiatric Clinical Faculty Association}
 
 \section{Professional Activities}
 \phantomsection
 \subsection{Society Membership}
 
 \begin{tabbing}
-	\hspace{3cm} \= hspace{1cm} \= \kill
+	\hspace{1cm} \= hspace{1cm} \= \kill
 	{2019--} \> \> International Society for Autism Research\\[5pt]
 	{2018--} \> \> New York Academy of Sciences\\[5pt]
 %	{2016--} \> \> National Physicians Alliance\\[5pt]
@@ -114,16 +182,16 @@
 	{2010--} \> \> American Psychiatric Association
 \end{tabbing}
 
-\subsection{Leadership}
+\subsection{Leadership and Committee Involvement}
 
-\leadership{2015}{2016}{Resident/Fellow Representative}{Southern California Psychiatric Society}
+\leadership{2018--}{}{Career Development Working Group}{Autism and Intellectual Disability Committee}{American Academy of Child and Adolescent Psychiatry}
+
+\leadership{2015}{2016}{Resident/Fellow Representative}{Southern California Psychiatric Society}{}
 
 \subsection{Peer Review Activities}
-\begin{tabbing}
-	\hspace{3cm} \= hspace{1cm} \= \kill
-	{2018--2019} \> \> \textit{Journal of Autism and Developmental Disorders} (Ad Hoc)\\[5pt]
-	{2018} \> \> \textit{Autism Research} (Ad Hoc)\\[5pt]
-\end{tabbing}	
+
+\begin{flushleft}\textit{Journal of Autism and Developmental Disorders} (2)\\
+\textit{Autism Research} (2)\end{flushleft}%\\[5pt]
 
 \section{Publications}
 \phantomsection
@@ -139,13 +207,13 @@
 
 \subsection{Chapters}
 
-\publication{Johnson MR, Hatzis NM, \textbf{Jutla A}. ``Children and adolescents.'' In: Roberts LW, ed. \textit{The American Psychiatric Association Publishing Textbook of Psychiatry.} 7\textsuperscript{th} ed. Arlington, VA: APA Publishing; 2019.}
+\publication{Johnson MR, Hatzis NM, \textbf{Jutla A}. ``Children and adolescents.'' In: Roberts LW, ed. \textit{The American Psychiatric Association Publishing Textbook of Psychiatry.} 7\textsuperscript{th} ed. Washington, DC: American Psychiatric Association Publishing; 2019.}
 
 \publication{Plioplys S, \textbf{Jutla A}. ``Psychogenic non-epileptic seizures and comorbid epilepsy in an adolescent.'' In: Hauptman AJ, Salpekar JA, eds. \textit{Pediatric Neuropsychiatry: A Case-Based Approach.} Cham, Switzerland: Springer; 2019:167-178. {\href{https://doi.org/10.1007/978-3-319-94998-7_16}{doi:10.1007/978-3-319-94998-7\_16}}}
 
-\publication{\textbf{Jutla A}. ``Romance, relationships, and residency.'' In: Foreman T, Dickstein LJ, Garakani A, Jordan A, Richards M, eds. \textit{A Resident's Guide to Surviving Psychiatric Training}. 3\textsuperscript{rd} ed. Arlington, VA: APA Publishing; 2016:184-186.}
+\publication{\textbf{Jutla A}. ``Romance, relationships, and residency.'' In: Foreman T, Dickstein LJ, Garakani A, Jordan A, Richards M, eds. \textit{A Resident's Guide to Surviving Psychiatric Training}. 3\textsuperscript{rd} ed. Arlington, VA: American Psychiatric Association; 2016:184-186.}
 
-\publication{\textbf{Jutla A}. ``Subspecialty training in psychiatry.'' In: Foreman T, Dickstein LJ, Garakani A, Jordan A, Richards M, eds. \textit{A Resident's Guide to Surviving Psychiatric Training}. 3\textsuperscript{rd} ed. Arlington, VA: APA Publishing; 2016:190-195.}
+\publication{\textbf{Jutla A}. ``Subspecialty training in psychiatry.'' In: Foreman T, Dickstein LJ, Garakani A, Jordan A, Richards M, eds. \textit{A Resident's Guide to Surviving Psychiatric Training}. 3\textsuperscript{rd} ed. Arlington, VA: American Psychiatric Association; 2016:190-195.}
 
 \section{Presentations}
 
@@ -176,7 +244,7 @@
 
 \publication{\textbf{Jutla A*}, Ramos N. ``An `atypical' case of neuroleptic malignant syndrome.'' Poster at: American Academy of Child and Adolescent Psychiatry, 62\textsuperscript{nd} Annual Meeting; October 23, 2015; San Antonio, TX. {\href{https://doi.org/10.13140/RG.2.2.33120.58888}{doi:10.13140/RG.2.2.33120.58888}}.}
 
-\subsection{Talks and Lectures}
+\subsection{Talks}
 
 \lecture{Tioleco N, \textbf{Jutla A}, Reed HE, Whitaker AH. ``\textit{Life, Animated}: How Disney movies helped a boy with ASD connect.'' To be presented at: American Academy of Child and Adolescent Psychiatry, 66\textsuperscript{th} Annual Meeting; Media Theatre: \textit{Life, Animated}; October 15, 2019; Chicago, IL.}
 
@@ -196,19 +264,43 @@
 
 \section{Teaching}
 
-\lecture{Teaching assistant, ``Workshop on autism spectrum disorders,'' Cold Spring Harbor Laboratory; 7/29/19 - 8/4/2019}
+\begin{tabbing}
+	\hspace{1cm} \= hspace{1cm} \= hspace{1cm} \= \kill
+	{7/29/19--8/4/19} \> \> Teaching assistant\\
+					  \> \> Workshop on Autism Spectrum Disorders\\
+					  \> \> Cold Spring Harbor Laboratory\\[5pt]
 
-\lecture{Discussant, ``Child development,'' Board Review Seminar Series, Columbia / Cornell / NewYork-Presbyterian Hospital Child Psychiatry Fellowship; 4/10/19.}
+	{4/10/19}		  \> \> Discussant, ``Child development''\\
+					  \> \> Board Review Seminar Series\\
+					  \> \> Columbia/Cornell/NewYork-Presbyterian Hospital Child Psychiatry Fellowship\\[5pt]
 
-\lecture{Speaker, ``Pharmacologic treatment of co-occurring psychiatric symptoms in youth with autism spectrum disorder,'' Management of Aggression in Youth with Autism Spectrum Disorder Theme Day, Columbia / Cornell / NewYork-Presbyterian Hospital Child Psychiatry Fellowship; 3/13/19.}
+	{3/13/19}		\> \> Lecturer, \> ``Pharmacologic treatment of co-occurring psychiatric symptoms in youth\\
+					\> \> \>  \hphantom{ } with autism spectrum disorder''\\ 
+					\> \> Management of Aggression in Youth with Autism Spectrum Disorder Theme Day\\ 
+					\> \> Columbia/Cornell/NewYork-Presbyterian Hospital Child Psychiatry Fellowship\\[5pt]
 
-\lecture{Discussant, ``Intellectual disability and developmental disorders,'' Board Review Seminar Series, Columbia / Cornell / NewYork-Presbyterian Hospital Child Psychiatry Fellowship; 2/27/19.}
+	{2/27/19}		  \> \> Discussant, ``Intellectual disability and developmental disorders''\\
+					  \> \> Board Review Seminar Series\\
+					  \> \> Columbia/Cornell/NewYork-Presbyterian Hospital Child Psychiatry Fellowship\\[5pt]
 
-\lecture{Speaker, ``Overview of child psychiatry,'' Psychiatry Clerkship Lecture Series, Northwestern University Feinberg School of Medicine; 6/5/18, 4/24/18, 2/27/18, 1/30/18, 12/5/17, 11/7/17, 10/10/17, 9/19/17, 8/8/17, 7/18/17, 6/20/17, 5/16/17, 4/18/17, 3/21/17, 2/21/17.}
+	{2017--2018}	\> \> Lecturer, ``Overview of child psychiatry''\\
+					\> \> Psychiatry Clerkship Lecture Series\\
+					\> \> Northwestern University Feinberg School of Medicine\\
+					\> \> Dates: \> 6/5/18, 4/24/18, 2/27/18, 1/30/18, 12/5/17, 11/7/17, 10/10/17, 9/19/17,\\ 
+					\> \> \> 		8/8/17, 7/18/17, 6/20/17, 5/16/17, 4/18/17, 3/21/17, 2/21/17.\\[5pt]
 
-\lecture{Speaker, ``Emotional and behavioral problems in children and adolescents,'' Northwestern University Pediatric Otolaryngology Fellowship; 4/4/18, 11/30/16.}
+	{2018, 2016}	\> \> Lecturer, ``Emotional and behavioral problems in children and adolescents''\\
+					\> \> Northwestern University Pediatric Otolaryngology Fellowship\\
+					\> \> Columbia/Cornell/NewYork-Presbyterian Hospital Child Psychiatry Fellowship\\
+					\> \> Dates: \> 4/4/18, 11/30/16.\\[5pt]
 
-\lecture{Speaker, ``Child psychiatry for pediatricians,'' Northwestern University Pediatrics Residency; 9/27/17.}
 
-\lecture{Workshop leader, Medical Decision-Making Course, Northwestern University Feinberg School of Medicine; 2/9/17, 2/22/17, 3/9/17, 3/22/17, 4/20/17.}
-\end{document}
+	{9/27/17}		\> \> Lecturer, ``Child psychiatry for pediatricians''\\
+					\> \> Northwestern University Pediatrics Residency\\[5pt]
+	
+	{2017}			\> \> Workshop leader\\
+					\> \> Medical Decision-Making\\
+					\> \> Northwestern University Feinberg School of Medicine\\
+					\> \> Dates: \> 2/9/17, 2/22/17, 3/9/17, 3/22/17, 4/20/17.\end{tabbing}
+
+					\end{document}
